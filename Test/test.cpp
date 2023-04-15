@@ -84,7 +84,7 @@ TEST(WordCheckTest, ExtraCharTrue) {
 
 	getline(inputFile, inputLine);
 
-	if (extraChar(inputLine)) {
+	if (extraChar(inputLine) == true) {
 		SUCCEED();
 	}
 	else {
@@ -101,7 +101,7 @@ TEST(WordCheckTest, ExtraCharFalse) {
 
 	getline(inputFile, inputLine);
 
-	if (!extraChar(inputLine)) {
+	if (extraChar(inputLine) == false) {
 		SUCCEED();
 	}
 	else {
@@ -118,7 +118,7 @@ TEST(WordCheckTest, SwearPresent) {
 
 	getline(inputFile, inputLine);
 
-	if (swears(inputLine)) {
+	if (swears(inputLine) == true) {
 		SUCCEED();
 	}
 	else {
@@ -135,7 +135,7 @@ TEST(WordCheckTest, NoSwearPresent) {
 
 	getline(inputFile, inputLine);
 
-	if (!swears(inputLine)) {
+	if (swears(inputLine) == false) {
 		SUCCEED();
 	}
 	else {
