@@ -45,13 +45,43 @@ bool extraChar(string inputLine) {
 }
 
 bool checkUpper(string file) {
+    ifstream input(file);
+    string line;
+    vector<string> vec;
+    int chk = 0;
 
+    while (getline(input, line, ' ')) {
+        vec.push_back(line);
+    }
+    
+    for (int i = 0; i < vec.size(); i++) {
+        string word = vec[i];
+        for (int j = 0; j < word.length(); j++) {
+            if (!isupper(word[j])) {
+                chk++;
+            }
+        }
+    }
 
-    return false;
+    if (chk == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 
 bool replaceWithRandom(string fileName, string word) {
+    ifstream input(fileName);
+    string line;
+    vector<string> vec;
+    int chk = 0;
+
+    while (getline(input, line, ' ')) {
+        vec.push_back(line);
+    }
+
 
     return false;
 }
