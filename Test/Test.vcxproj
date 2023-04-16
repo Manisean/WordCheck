@@ -53,10 +53,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="fox.txt" />
     <Text Include="noSwearsTest.txt" />
     <Text Include="spellingFalse.txt" />
     <Text Include="spellingTrue.txt" />
     <Text Include="swearTest.txt" />
+    <Text Include="checkUpper3.txt" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
