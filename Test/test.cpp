@@ -18,20 +18,17 @@ TEST(WordCheckTest, UpperTest) {
 
 // Test for a provided word to be replaced with a random word from a separate text file
 TEST(WordCheckTest, RandomTest) {
-	
-	string filename = "C:\\Users\\markh\\source\\repos\\WordCheck\\Test\\fox.txt";
-	replaceWithRandom(filename, "fox");
 
-	// Read the file and make sure "fox" has been replaced
-	ifstream infile(filename);
-	string line;
-	getline(infile, line);
-	infile.close();
+	replaceWithRandom("input.txt", "fox");
+	ifstream file("input.txt");
 
-	EXPECT_NE(line.find("fox"), std::string::npos) << "Original word not found in file.";
-	EXPECT_EQ(line.find("fox"), std::string::npos) << "Replaced word found in file.";
+	string sentence;
+	getline(file, sentence);
+
+	ASSERT_FALSE(sentence.find("fox") != string::npos);
+
+	file.close();
 }
-
 
 
 // check if words in given file have an extra letter
