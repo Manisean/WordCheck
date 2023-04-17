@@ -13,7 +13,7 @@ int main() {
         swears(inputLine);
         checkUpper(name);
 
-        cout << "Enter a word from the file you want to replace";
+        cout << "Enter a word from the file you want to replace: ";
         cin >> word;
         replaceWithRandom(name, word);
 

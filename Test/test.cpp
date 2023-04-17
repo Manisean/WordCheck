@@ -36,7 +36,7 @@ TEST(WordCheckTest, RandomTest) {
 
 // check if words in given file have an extra letter
 TEST(WordCheckTest, ExtraCharTrue) {
-	ifstream inputFile("spellingTrue.txt");
+	ifstream inputFile("C:\\Users\\markh\\source\\repos\\WordCheck\\Test\\spellingTrue.txt");
 	string inputLine;
 
 	getline(inputFile, inputLine);
@@ -53,7 +53,7 @@ TEST(WordCheckTest, ExtraCharTrue) {
 
 // check if words in given file are real, no extra letter
 TEST(WordCheckTest, ExtraCharFalse) {
-	ifstream inputFile("spellingFalse.txt");
+	ifstream inputFile("C:\\Users\\markh\\source\\repos\\WordCheck\\Test\\spellingFalse.txt");
 	string inputLine;
 
 	getline(inputFile, inputLine);
@@ -70,7 +70,7 @@ TEST(WordCheckTest, ExtraCharFalse) {
 
 // check if file has swear words
 TEST(WordCheckTest, SwearPresent) {
-	ifstream inputFile("swearTest.txt");
+	ifstream inputFile("C:\\Users\\markh\\source\\repos\\WordCheck\\Test\\swearTest.txt");
 	string inputLine;
 
 	getline(inputFile, inputLine);
@@ -89,12 +89,12 @@ TEST(WordCheckTest, SwearPresent) {
 
 // check if file is free of swear words
 TEST(WordCheckTest, NoSwearPresent) {
-	ifstream inputFile("noSwearsTest.txt");
+	ifstream inputFile("C:\\Users\\markh\\source\\repos\\WordCheck\\Test\\noSwearsTest.txt");
 	string inputLine;
 
 	getline(inputFile, inputLine);
 
-	if (swears(inputLine) == false) {
+	if (!swears(inputLine)) {
 		SUCCEED();
 	}
 	else {

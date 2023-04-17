@@ -27,5 +27,6 @@
   <ItemGroup>
     <Text Include="inputFile.txt" />
     <Text Include="words.txt" />
+    <Text Include="swears.txt" />
   </ItemGroup>
 </Project>
