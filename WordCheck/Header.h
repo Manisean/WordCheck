@@ -63,11 +63,10 @@ bool extraChar(string inputLine) {
 
     for (int i = 0; i < words.size(); i++) {
         if (inputLine.find(words[i] + c) != string::npos) {
+            cout << "Your typo is: " << words[i] << c << " it should be: " << words[i] << endl;
             chk++;
         }
     }
-
-    wordsFile.close();
 
     if (chk > 0) {
         return true;

@@ -9,11 +9,12 @@ int main() {
     if (inputFile) {
         getline(inputFile, inputLine);
 
+        cout << "Your file contents are: " << "'" << inputLine << "'" << endl;
         extraChar(inputLine);
         swears(inputLine);
         checkUpper(name);
 
-        cout << "Enter a word from the file you want to replace: ";
+        cout << "Enter a word from the file you want to randomly replace: ";
         cin >> word;
         replaceWithRandom(name, word);
 

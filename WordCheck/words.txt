@@ -9,7 +9,7 @@ dog
 cat
 find
 love
-eat
+cool
 foor
 burger
 taco
